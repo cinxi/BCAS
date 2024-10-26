@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barangay Clinic Appointment System - Login</title>
+
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #F6FAFF;
+            font-family: 'Poppins', sans-serif;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .left-side {
+            flex: 1;
+            background: linear-gradient(135deg, #176B87, #1c84a7);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            text-align: left;
+        }
+        .left-content h1 {
+            font-size: 2.5em;
+            margin: 0;  
+            line-height: 1.2;
+            animation: fadeInDown 1s ease-out;
+        }
+        .right-side {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+        .login-box {
+            width: 100%;
+            max-width: 400px;
+            background-color: #ffffff;
+            padding: 30px 40px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .login-box:hover {
+            transform: translateY(-5px);
+        }
+        .login-box h2 {
+            margin-bottom: 25px;
+            font-size: 24px;
+            color: #333333;
+        }
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #666666;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        .input-group input:focus {
+            border-color: #176B87;
+            outline: none;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #1c84a7;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+        .login-btn:hover {
+            background-color: #14586f;
+            transform: scale(1.02);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .left-side, .right-side {
+                flex: none;
+                width: 100%;
+                height: 50vh;
+                padding: 20px;
+            }
+            .left-content h1 {
+                font-size: 2em;
+            }
+            .login-box {
+                padding: 20px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Side with Two Lines of Text -->
+        <div class="left-side">
+            <div class="left-content">
+                <h1>Faster Appointment,</h1>
+                <h1>Efficient Aid</h1>
+            </div>
+        </div>
+        
+        <!-- Right Side with Login Form -->
+        <div class="right-side">
+            <div class="login-box">
+                <h2>Login</h2>
+                <form action="GET">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="login-btn">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
